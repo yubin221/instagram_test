@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Instagram</title>
+        <link rel="stylesheet" href="insta.css">
+    </head>
+    <body>
+        <div id = "background">
+            <div id = "top">
+                <div>
+                    <img src = "Instagram_logo_20161.png" width="160px" id="logo" onclick="
+                    if(document.getElementById('logo').src.match('Instagram_logo_20161.png')){
+                        document.getElementById('logo').src = 'cat.gif';
+                    }
+                    else{
+                        document.getElementById('logo').src = 'Instagram_logo_20161.png';
+                    }
+                    ">
+                </div>
+                <div id = "main">
+                    <h1>Instagram</h1>
+                    <div>사진 및 비디오</div>
+                    <div><img src = "Vector.png">  <img src = "Vector.png">  <img src = "Vector.png">  <img src = "Vector.png"> <img src = "Vector.png"> 125만</div>
+                </div>
+                <input id = "update" type = "button" value = "업데이트" onclick="
+                if(this.value === '업데이트'){
+                    this.value = '설치중';
+                    setTimeout(() => this.value = '열기', 3000);
+                }
+                else if(this.value === '열기'){
+                    this.value = '업데이트'
+                }
+                ">
+            </div>
+            <div id = "img_isg">
+                <div><img src = "InstaImage1.png" width="450px" onclick="
+                    target = document.querySelector('#background');
+                    target.style.backgroundColor = 'white';
+                    document.querySelector('h1').style.color = 'black';
+                    document.querySelector('#main').style.color = 'black';
+                    "></div>
+                <div><img src = "InstaImage2.png" width="450px" onclick="
+                    target = document.querySelector('#background');
+                    target.style.backgroundColor = 'black';
+                    document.querySelector('h1').style.color = 'white';
+                    document.querySelector('#main').style.color = 'rgba(255, 255, 255, 0.7)';
+                    "></div>
+                <div><img src = "InstaImage3.png" width="450px"></div>
+            </div>
+        </div>
+    </body>
+</html>
